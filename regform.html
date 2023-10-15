@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark navbar-expand-lg header-bg">
+            <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1">Kerala Congress</span>
+            </div>
+        </nav>
+    </header>
+    <section class="banner">
+        <div class="row">
+            <div class="col-12">
+                <img style="height: 150px;" class="w-100 img-fluid" src="images/BANNER.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <div class="container d-flex justify-content-between">
+        <div class="col-md-6">
+            <div class="softname py-auto">
+                <h1>Kerala Youth front</h1> Membership registraton
+            </div>
+        </div>
+        <div class="col-md-6 ">
+            <div class="card-header mt-4 head-back">
+                <h3 style="color: #f3f3fa;">Registration form</h3>
+            </div>
+            <div class="">
+                
+                <div class="">
+                    <form action="/" method="POST">
+                        <hr />
+                        <h4 class="text-center">Personal details</h4>
+                        <hr />
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="">
+                                    <div class="form-group">
+                                        <label for="textFirstname">First name<span class="text-danger">*</span></label>
+                                        <input required type="text" name="fname" placeholder="First name" id="textFirstName"
+                                            class="form-control my-3" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="textLastname">Last name<span class="text-danger">*</span></label>
+                                    <input required type="text" name="lname" placeholder="Last name" id="textLastName"
+                                        class="form-control my-3" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="textAddress">Address<span class="text-danger">*</span></label>
+                                <textarea required name="address" id="textAddress" placeholder="Full Address" rows="3"
+                                    class="form-control my-3"></textarea>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="textEmail">Email address</label>
+                                    <input required type="email" id="textEmail" name="email" placeholder="Email address"
+                                        class="form-control my-3">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="textPhoneNumber">Mobile</label>
+                                    <input required type="number" class="form-control my-3" id="textPhoneNumber"
+                                        placeholder="Phone number" name="mobile">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="textDob">Date of birth</label>
+                                    <input required class="form-control my-3" type="date" name="dateofbirth" id="textDob" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="textFatherName">Name of father</label>
+                                    <input required type="text" class="form-control my-3" name="fathername" id="textFatherName"
+                                        placeholder="Name of father">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="textExperience"> Previous experience</label>
+                            <textarea class="form-control my-3" placeholder="Experience" name="experience"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="imgPhoto">Photo</label>
+                            <input class="form-control my-3" type="file" name="photo" id="imgPhoto" />
+                        </div>
+                        <hr />
+                        <h4 class="text-center">Location details</h4>
+                        <hr />
+                        <div class="row">
+                            
+                        
+                            <div class="col-sm-3">
+                                <label for="">District</label>
+                                <select onchange="print_city('state', this.selectedIndex);" id="sts" name ="stt" class="form-select my-3 form-control" required></select>
+                        
+                            </div>
+                            <div class="col-sm-3">
+                                <label for="">Assembly</label>
+                                <select id ="state" class="form-select my-3 form-control" required></select>
+                                
+                            </div>
+                            <div class="col-sm-3">
+                                <label for="">Self Govt.</label>
+                                <select class="form-select my-3" name="selfgovt" id="selfgovt">
+                                    <option value="" selected disabled>...</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-sm-3">
+                                <label for="">Ward</label>
+                                <input type="text" class="form-control my-3" placeholder="Ward number or name"
+                                    name="ward" id="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="textReferedBy">Reference Person</label>
+                            <input type="text" placeholder="Reference" name="reference" id="textReferedBy"
+                                class="form-control my-3">
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <button type="submit" class="btn btn-danger mx-2">Cancel</button>
+                            <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <footer>
+        <P class="footer-content">Kerala Congress (Joseph) Copyright &copy; 2021</P>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+        crossorigin="anonymous"></script>
+</body>
+
+<script src="cities.js"></script>
+<script language="javascript">print_state("sts");</script>
+</html>
